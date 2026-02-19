@@ -101,12 +101,3 @@ main <- function() {
 train_autoe <- build_and_train_autoencoder(mat = train_rppa, encoding_dim = 50, epochs = 100, batch_size = 16)
 
 
-
-### TMP
-#library("readxl")
-#fl <- "C:\\Users\\Dafydd\\Downloads\\Single cytokines -- OR matrices with cluster-robust CIs.xlsx"
-#sheets <- excel_sheets(fl)
-#tmp <- do.call(rbind,lapply(sheets,function(x){
-#  data.frame(read_excel(fl,sheet=x),sheet=gsub("OR_","",x))
-#}))
-#write.csv(tmp,"C:\\Users\\Dafydd\\Downloads\\OR robust SingleCyto_CIs_Laura20260202.csv",row.names=FALSE)
